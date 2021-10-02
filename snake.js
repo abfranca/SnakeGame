@@ -106,8 +106,8 @@ async function inicio() {
         }
     })
     do {
-        movimenta()
         await delay(time)
+        movimenta()
     } while (jogando)
 }
 
@@ -123,7 +123,7 @@ function movimenta() {
             telinha.comida()
             pontuacao++
             placar.innerText = pontuacao
-            if (time % 10 == 0) {
+            if (pontuacao % 10 == 0) {
                 time = Math.floor(time * 0.9)
             }
             concluido = true
